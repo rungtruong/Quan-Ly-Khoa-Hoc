@@ -45,7 +45,7 @@ function taoBang(arr) {
                     <a href="#formKH">
                     <button class="btn btn-info"
                         data-makh = "${KH.MaKhoaHoc}"
-                        data-ten = "${KH.TenKhoaHoc}"
+                        data-tenkh = "${KH.TenKhoaHoc}"
                         data-mota = "${KH.MoTa}"
                         data-hinhanh = "${KH.HinhAnh}"
                         data-luotxem = "${KH.LuotXem}"
@@ -219,7 +219,7 @@ function capNhatKH() {
     var khoaHocCapNhat = new KhoaHoc(makh, tenkh, mota, hinhanh, luotxem, nguoitao);
 
     khoaHocService.capNhatKH(khoaHocCapNhat).then(function (res) {
-        // console.log(res);
+        console.log(res);
         var index = findIndex(dsKhoaHoc, makh);
         dsKhoaHoc[index] = khoaHocCapNhat;
         taoBang(dsKhoaHoc);
